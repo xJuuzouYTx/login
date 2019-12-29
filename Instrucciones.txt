@@ -1,0 +1,20 @@
+Se debe crear una base de datos llamada 'login' y una tabla users:
+
+create database login;
+
+use login;
+
+create table users(
+    id INT(16) NOT NULL, 
+    username VARCHAR(32) NOT NULL, 
+    password VARCHAR(60) NOT NULL,
+    email VARCHAR(100) NOT NULL
+    );
+
+ALTER TABLE users ADD PRIMARY KEY (id);
+
+ALTER TABLE users MODIFY id INT(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
+
+DESCRIBE users;
+
+O bien configurar los archivos en los que se accede a la base de datos...

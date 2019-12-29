@@ -1,0 +1,36 @@
+<div class="contenedor">
+    <link rel="stylesheet" href="/css/login.css">
+    <div class="card1">
+        <div class="card-header">
+            <h1>Login</h1>
+        </div>
+        <form class="form-group" action="/signin" method="POST">
+            <div class="name-card">
+                <input type="text" name="username" placeholder="Email or Phone">
+            </div>
+            <div class="name-card">
+                <input type="password" id="contrasena" name="password" placeholder="Password">
+                <!--Para hacerla visible se pone un checkbox y una funcion-->
+            </div>
+            <div class="contrasena">
+                <input type="checkbox" onclick="myFunction()">   Show Password
+            </div>
+
+           <button class="glow-on-hover" type="submit">SignIn</button>
+           <a href="/signup">Registrarse</a>
+        </form>
+    </div>
+</div>
+
+<!--Checkbox-->
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("contrasena");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+            }
+        }
+</script>
